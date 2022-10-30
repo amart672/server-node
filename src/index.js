@@ -1,11 +1,22 @@
+/* eslint-disable no-template-curly-in-string */
+import './helpers/dontenv'
 import express from 'express'
+import morgan from 'morgan'
+import cors from 'cors'
+import helmet from 'helmet'
+import logger from './helpers/logger'
+import router from './routes'
+import { notFound, errorHandler } from './helpers/errors'
 
+const port = parseInt(process.env.PORT, 10) || 30000
 const app = express()
+app.use(morgan(process.env.MORGAN_LOG))
+app.use(cors({ origin: process.env.ORIGIN }))
+app.use(helmet())
+app.use(router)
+app.use(notFound)
+app.use(errorHandler)
 
-const port = 3000
-
-app.get('/', (req, res) => {
-  res.send({ msg: 'Hello There Its me Abby :)' })
-})
-
-app.listen(port)
+app.listen(port, () =>
+  logger.info('Application started at http://localhost${process.env.PORT}'),
+)
