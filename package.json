@@ -12,6 +12,7 @@
   "author": "Abigail Martinez <amart672@stu.southtexascollege.edu>",
   "license": "ISC",
   "dependencies": {
+    "consola": "^2.15.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "eslint": "^8.25.0",
