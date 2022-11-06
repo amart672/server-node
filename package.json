@@ -12,7 +12,7 @@
   "author": "Abigail Martinez <amart672@stu.southtexascollege.edu>",
   "license": "ISC",
   "dependencies": {
-    "consola": "^2.15.3",
+    "body-parser": "^1.20.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "eslint": "^8.25.0",
@@ -26,7 +26,8 @@
     "nodemon": "^2.0.20",
     "pino": "^8.7.0",
     "pino-pretty": "^9.1.1",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",
