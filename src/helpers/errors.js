@@ -1,7 +1,6 @@
 import logger from './logger'
 
 export const notFound = (req, res, next) => {
-  // eslint-disable-next-line no-template-curly-in-string
   const error = new Error('Not Found - ${req.orinalUrl}')
   res.status(404)
   next(error)
