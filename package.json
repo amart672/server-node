@@ -12,6 +12,7 @@
   "author": "Abigail Martinez <amart672@stu.southtexascollege.edu>",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^4.6.1",
     "body-parse": "^0.1.0",
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
@@ -37,6 +38,7 @@
     "@babel/node": "^7.19.1",
     "@babel/plugin-transform-runtime": "^7.19.1",
     "@babel/preset-env": "^7.19.4",
-    "@babel/runtime": "^7.19.4"
+    "@babel/runtime": "^7.19.4",
+    "prisma": "^4.6.1"
   }
 }
