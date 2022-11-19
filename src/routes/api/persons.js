@@ -1,4 +1,5 @@
 import { Router } from 'express'
+
 import {
   getPersons,
   getPerson,
@@ -35,12 +36,13 @@ router.put('/:id', (req, res) => {
   if (updatedPerson) {
     res.send(updatedPerson)
   }
+  res.status(404).send({ msg: 'Person not found' })
 })
 
 router.delete('/:id', (req, res) => {
   const deleted = deletePerson(req.params.id)
   if (deleted) {
-    res.send({ msg: 'Person ${req.params.id} Deleted' })
+    res.send({ msg: `Person ${req.params.id} Deleted` })
   }
   res.status(404).send({ msg: 'Person not found' })
 })

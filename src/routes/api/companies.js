@@ -1,4 +1,5 @@
 import { Router } from 'express'
+
 import { getCompanies, getCompany, addCompany } from '../../models/companies'
 import { addDepartment } from '../../models/departments'
 
